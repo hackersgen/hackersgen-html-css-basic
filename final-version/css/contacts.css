@@ -1,0 +1,39 @@
+.contacts-section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.contacts-section .contact-item {
+  width: 30%;
+}
+
+.contacts-section .contact-item > h2 {
+  margin-bottom: 2rem;
+}
+
+.top-space {
+  margin-top: 4rem;
+}
+
+@media (max-width: 769px) {
+  .contacts-section {
+    flex-direction: column;
+  }
+
+  .contacts-section .contact-item {
+    width: 100%;
+  }
+
+  .contacts-section > :not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  .contacts-section .contact-item > h2 {
+    margin-bottom: 0;
+  }
+  .top-space {
+    margin-top: 0;
+  }
+}
