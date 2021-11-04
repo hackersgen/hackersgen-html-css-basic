@@ -13,7 +13,7 @@
 body {
   font-family: "Roboto";
   font-size: 1.125rem;
-  line-height: 24px;  
+  line-height: 24px;
 }
 
 .toggler {
@@ -159,7 +159,7 @@ nav .menu .active {
   width: 100px;
   height: 1px;
   margin-left: 10px;
-  background-color: var(--primary800)
+  background-color: var(--primary800);
 }
 
 @media (max-width: 1200px) {
@@ -194,14 +194,14 @@ nav .menu .active {
     opacity: 0;
     display: block;
     cursor: pointer;
-    z-index: 2;
+    z-index: 3;
     width: 30px;
     height: 10px;
   }
 
   .hamburger {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     right: 0;
     width: 30px;
     height: 10px;
@@ -244,6 +244,11 @@ nav .menu .active {
 
   .toggler:checked ~ .menu {
     display: flex;
+    z-index: 1;
+  }
+
+  body + .toggler:checked {
+    position: fixed;
   }
 
   nav {
